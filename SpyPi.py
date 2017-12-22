@@ -17,7 +17,7 @@ try:
         if GPIO.input(17):
             print("Motion Detected")
             GPIO.output(23,GPIO.HIGH) #Turn on LED 1
-            GPIO.output(24,GPIO.HIGH) #Turn off LED 2
+            GPIO.output(24,GPIO.HIGH) #Turn on LED 2
             camera.capture('/home/pi/Desktop/SpyPi_Photos/' + time.strftime('%y%m%d_%H-%M-%S') + '.jpg')
             	#Establishes a path and file name for captured photos
             time.sleep(5) #Prevents double detection of motion
